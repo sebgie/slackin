@@ -38,6 +38,7 @@
   "devDependencies": {
     "eslint": "2.12.0",
     "eslint-config-default": "0.2.0",
+    "ghost-deploy": "github:sebgie/ghost-deploy",
     "mocha": "2.2.4",
     "nock": "2.17.0",
     "supertest": "0.15.0"
@@ -57,9 +58,10 @@
   },
   "scripts": {
     "test": "mocha && eslint lib/**",
-    "postinstall": "gulp",
+    "postinstall": "npm build",
     "build": "gulp",
-    "start": "chmod +x bin/slackin && ./bin/slackin"
+    "start": "chmod +x bin/slackin && ./bin/slackin",
+    "shipit": "shipit"
   },
   "now": {
     "files": [
